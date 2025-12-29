@@ -86,6 +86,9 @@
             opacity: 1;
             visibility: visible;
         }
+        .aspect-square {
+            aspect-ratio: 1 / 1;
+        }
     </style>
 </head>
 <body class="bg-brand-dark text-stone-200 font-sans antialiased">
@@ -165,55 +168,75 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20">
                 <span class="text-brand-gold uppercase tracking-[0.3em] text-xs mb-4 block font-bold">Selección Gourmet</span>
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white">Presentaciones Disponibles</h2>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white">Nuestra Tienda</h2>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-12">
                 <!-- 250gr -->
-                <div class="bg-[#141414] border border-stone-800 p-10 text-center hover:border-brand-gold/40 transition-all group">
-                    <div class="mb-10 opacity-60 group-hover:opacity-100 transition-opacity">
-                        <svg class="w-24 h-24 mx-auto text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                <div class="bg-[#141414] border border-stone-800 text-center hover:border-brand-gold/40 transition-all group rounded-sm overflow-hidden flex flex-col">
+                    <div class="relative overflow-hidden aspect-square bg-stone-900">
+                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Bolsa Café 250gr" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent"></div>
                     </div>
-                    <h3 class="text-2xl font-serif font-bold mb-2">Personal</h3>
-                    <p class="text-brand-gold font-semibold tracking-widest text-sm mb-6">250 GRAMOS</p>
-                    <p class="text-stone-500 text-sm mb-10 leading-relaxed font-light">Ideal para conocer el sabor auténtico del Valle del Monzón.</p>
-                    <div class="text-3xl font-serif mb-10 text-white">S/ 25.00</div>
-                    <button onclick="comprar('250gr', 25)" class="w-full border border-stone-700 py-4 text-xs uppercase tracking-widest font-bold hover:bg-brand-gold hover:border-brand-gold transition-all text-white">
-                        Ordenar por WhatsApp
-                    </button>
+                    <div class="p-8 pt-2 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-serif font-bold mb-1">Café Personal</h3>
+                        <p class="text-brand-gold font-semibold tracking-widest text-[10px] mb-4">EDICIÓN 250 GRAMOS</p>
+                        <p class="text-stone-500 text-sm mb-8 leading-relaxed font-light flex-1">Perfecto para una semana de aroma y sabor intenso en casa.</p>
+                        <div class="text-3xl font-serif mb-8 text-white">S/ 25.00</div>
+                        <button onclick="comprar('250gr', 25)" class="w-full border border-stone-700 py-4 text-xs uppercase tracking-widest font-bold hover:bg-brand-gold hover:border-brand-gold transition-all text-white">
+                            Pedir ahora
+                        </button>
+                    </div>
                 </div>
 
                 <!-- 500gr -->
-                <div class="bg-[#141414] border border-brand-gold/40 p-10 text-center scale-105 shadow-2xl relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 bg-brand-gold text-white text-[10px] px-4 py-1 uppercase tracking-widest font-bold rotate-45 translate-x-6 translate-y-3">Popular</div>
-                    <div class="mb-10 group-hover:scale-110 transition-transform duration-500">
-                        <svg class="w-24 h-24 mx-auto text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                <div class="bg-[#141414] border border-brand-gold/40 text-center scale-105 shadow-2xl relative overflow-hidden group rounded-sm flex flex-col">
+                    <div class="absolute top-0 right-0 bg-brand-gold text-white text-[10px] px-6 py-2 uppercase tracking-widest font-bold rotate-45 translate-x-6 translate-y-2 z-20 shadow-lg">Más Vendido</div>
+                    <div class="relative overflow-hidden aspect-square bg-stone-900">
+                        <img src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Bolsa Café 500gr" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent"></div>
                     </div>
-                    <h3 class="text-2xl font-serif font-bold mb-2">Familiar</h3>
-                    <p class="text-brand-gold font-semibold tracking-widest text-sm mb-6">500 GRAMOS</p>
-                    <p class="text-stone-500 text-sm mb-10 leading-relaxed font-light">La medida justa para los amantes del buen café en casa.</p>
-                    <div class="text-3xl font-serif mb-10 text-white">S/ 45.00</div>
-                    <button onclick="comprar('500gr', 45)" class="w-full bg-brand-gold py-4 text-xs uppercase tracking-widest font-bold hover:bg-amber-700 transition-all text-white">
-                        Ordenar por WhatsApp
-                    </button>
+                    <div class="p-8 pt-2 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-serif font-bold mb-1">Café Familiar</h3>
+                        <p class="text-brand-gold font-semibold tracking-widest text-[10px] mb-4">EDICIÓN 500 GRAMOS</p>
+                        <p class="text-stone-500 text-sm mb-8 leading-relaxed font-light flex-1">La medida ideal para compartir el origen del Monzón en familia.</p>
+                        <div class="text-3xl font-serif mb-8 text-white">S/ 45.00</div>
+                        <button onclick="comprar('500gr', 45)" class="w-full bg-brand-gold py-4 text-xs uppercase tracking-widest font-bold hover:bg-amber-700 transition-all text-white">
+                            Pedir ahora
+                        </button>
+                    </div>
                 </div>
 
                 <!-- 1kg -->
-                <div class="bg-[#141414] border border-stone-800 p-10 text-center hover:border-brand-gold/40 transition-all group">
-                    <div class="mb-10 opacity-60 group-hover:opacity-100 transition-opacity">
-                        <svg class="w-24 h-24 mx-auto text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 10H9L8 4z"></path></svg>
+                <div class="bg-[#141414] border border-stone-800 text-center hover:border-brand-gold/40 transition-all group rounded-sm overflow-hidden flex flex-col">
+                    <div class="relative overflow-hidden aspect-square bg-stone-900">
+                        <img src="https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Bolsa Café 1kg" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent"></div>
                     </div>
-                    <h3 class="text-2xl font-serif font-bold mb-2">Reserva</h3>
-                    <p class="text-brand-gold font-semibold tracking-widest text-sm mb-6">1 KILOGRAMO</p>
-                    <p class="text-stone-500 text-sm mb-10 leading-relaxed font-light">Para los paladares más exigentes. Máximo ahorro y frescura.</p>
-                    <div class="text-3xl font-serif mb-10 text-white">S/ 85.00</div>
-                    <button onclick="comprar('1kg', 85)" class="w-full border border-stone-700 py-4 text-xs uppercase tracking-widest font-bold hover:bg-brand-gold hover:border-brand-gold transition-all text-white">
-                        Ordenar por WhatsApp
-                    </button>
+                    <div class="p-8 pt-2 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-serif font-bold mb-1">Reserva Especial</h3>
+                        <p class="text-brand-gold font-semibold tracking-widest text-[10px] mb-4">EDICIÓN 1 KILOGRAMO</p>
+                        <p class="text-stone-500 text-sm mb-8 leading-relaxed font-light flex-1">Para verdaderos expertos que no pueden vivir sin su dosis diaria.</p>
+                        <div class="text-3xl font-serif mb-8 text-white">S/ 85.00</div>
+                        <button onclick="comprar('1kg', 85)" class="w-full border border-stone-700 py-4 text-xs uppercase tracking-widest font-bold hover:bg-brand-gold hover:border-brand-gold transition-all text-white">
+                            Pedir ahora
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="mt-16 text-center text-stone-500 text-sm tracking-widest">
-                <p>📦 ENVÍO GRATIS A TODO EL PERÚ</p>
+            <div class="mt-20 text-center flex flex-col items-center">
+                <div class="flex items-center gap-4 text-stone-500 text-xs tracking-widest font-bold mb-4">
+                    <span class="w-8 h-px bg-stone-800"></span>
+                    <span>GARANTÍA DE FRESCURA</span>
+                    <span class="w-8 h-px bg-stone-800"></span>
+                </div>
+                <p class="text-stone-400 text-sm">Empacado en bolsas trilaminadas con válvula desgasificadora.</p>
             </div>
         </div>
     </section>
@@ -298,7 +321,7 @@
     </footer>
 
     <script>    
-        // Función Global de Compra (debe estar fuera del DOMContentLoaded para ser accesible desde el HTML)
+        // Función Global de Compra
         function comprar(presentacion, precio) {
             const numero = "51999999999"; 
             const mensaje = encodeURIComponent(`¡Hola Monzon Valley! Me gustaría pedir la presentación de ${presentacion} (S/ ${precio}.00). Vi la oferta de envío gratis.`);
