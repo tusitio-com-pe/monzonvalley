@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monzon Valley | Café Premium del Perú</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f0f0f',
+                            gold: '#d97706',
+                            stone: '#1c1917',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .bg-hero {
+            background: linear-gradient(rgba(15, 15, 15, 0.7), rgba(15, 15, 15, 1)), 
+                        url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-glass {
+            background: rgba(20, 20, 20, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        /* Personalización de scroll */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f0f0f; }
+        ::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d97706; }
+    </style>
+</head>
+<body class="bg-brand-dark text-stone-200 font-sans antialiased">
+
+    <!-- Navegación -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-8 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter text-brand-gold font-serif">
+                MONZON <span class="text-stone-100">VALLEY</span>
+            </div>
+            <div class="hidden md:flex space-x-10 text-xs tracking-widest uppercase font-semibold">
+                <a href="#inicio" class="hover:text-brand-gold transition-colors">Inicio</a>
+                <a href="#historia" class="hover:text-brand-gold transition-colors">Origen</a>
+                <a href="#productos" class="hover:text-brand-gold transition-colors">Tienda</a>
+                <a href="#ubicacion" class="hover:text-brand-gold transition-colors">Ubicación</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/51999999999" target="_blank" class="bg-brand-gold/10 text-brand-gold border border-brand-gold/30 px-4 py-2 rounded-sm text-xs uppercase tracking-widest hover:bg-brand-gold hover:text-white transition-all">
+                    Contacto
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="h-screen bg-hero flex items-center justify-center text-center px-6">
+        <div class="max-w-4xl">
+            <span class="text-brand-gold uppercase tracking-[0.4em] text-xs mb-6 block font-semibold animate-pulse">Cosecha de Altura · Huánuco</span>
+            <h1 class="text-6xl md:text-8xl font-serif font-bold mb-8 leading-tight">
+                Café Premium del <br>
+                <span class="italic font-light text-stone-400 font-serif">Valle del Monzón</span>
+            </h1>
+            <p class="text-lg text-stone-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                Notas achocolatadas y aroma persistente en cada taza. <br>
+                <strong>Envío gratis a todo el Perú.</strong>
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#productos" class="bg-brand-gold hover:bg-amber-700 text-white px-10 py-5 rounded-sm text-xs uppercase tracking-[0.2em] font-bold transition-all transform hover:-translate-y-1">
+                    Comprar Ahora
+                </a>
+                <a href="#historia" class="border border-stone-700 hover:border-brand-gold px-10 py-5 rounded-sm text-xs uppercase tracking-[0.2em] font-bold transition-all">
+                    Nuestra Historia
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historia -->
+    <section id="historia" class="py-32 px-6 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div class="relative">
+                <div class="absolute -inset-4 border border-brand-gold/20 translate-x-4 translate-y-4"></div>
+                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1000" alt="Cafetales en Monzón" class="relative z-10 w-full h-[550px] object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+            </div>
+            <div class="space-y-8">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold">Un Legado de Sabor</h2>
+                <div class="w-16 h-1 bg-brand-gold"></div>
+                <p class="text-stone-400 leading-loose text-lg">
+                    Monzón Valley nace en las fértiles tierras de Huánuco, donde el clima subtropical y la altitud ideal crean un ecosistema único para el café Arábica. Cada grano es seleccionado a mano y tostado artesanalmente para preservar su pureza.
+                </p>
+                <div class="grid grid-cols-2 gap-8 py-6 border-t border-stone-800">
+                    <div>
+                        <span class="text-brand-gold text-3xl font-bold font-serif">84+</span>
+                        <p class="text-[10px] uppercase tracking-widest text-stone-500 mt-2">Puntaje en Taza</p>
+                    </div>
+                    <div>
+                        <span class="text-brand-gold text-3xl font-bold font-serif">100%</span>
+                        <p class="text-[10px] uppercase tracking-widest text-stone-500 mt-2">Orgánico Peruano</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section id="productos" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <span class="text-brand-gold uppercase tracking-[0.3em] text-xs mb-4 block font-bold">Selección Gourmet</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold">Presentaciones Disponibles</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 250gr -->
+                <div class="bg-[#141414] border border-stone-800 p-10 text-center hover:border-brand-gold/40 transition-all group">
+                    <div class="mb-10 opacity-60 group-hover:opacity-100 transition-opacity">
+                        <svg class="w-24 h-24 mx-auto text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-2">Personal</h3>
+                    <p class="text-brand-gold font-semibold tracking-widest text-sm mb-6">250 GRAMOS</p>
+                    <p class="text-stone-500 text-sm mb-10 leading-relaxed font-light">Ideal para conocer el sabor auténtico del Valle del Monzón.</p>
+                    <div class="text-3xl font-serif mb-10">S/ 25.00</div>
+                    <button onclick="comprar('250gr', 25)" class="w-full border border-stone-700 py-4 text-xs uppercase tracking-widest font-bold hover:bg-brand-gold hover:border-brand-gold transition-all">
+                        Ordenar por WhatsApp
+                    </button>
+                </div>
+
+                <!-- 500gr -->
+                <div class="bg-[#141414] border border-brand-gold/40 p-10 text-center scale-105 shadow-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-brand-gold text-white text-[10px] px-4 py-1 uppercase tracking-widest font-bold rotate-45 translate-x-6 translate-y-3">Popular</div>
+                    <div class="mb-10 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-24 h-24 mx-auto text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-2">Familiar</h3>
+                    <p class="text-brand-gold font-semibold tracking-widest text-sm mb-6">500 GRAMOS</p>
+                    <p class="text-stone-500 text-sm mb-10 leading-relaxed font-light">La medida justa para los amantes del buen café en casa.</p>
+                    <div class="text-3xl font-serif mb-10">S/ 45.00</div>
+                    <button onclick="comprar('500gr', 45)" class="w-full bg-brand-gold py-4 text-xs uppercase tracking-widest font-bold hover:bg-amber-700 transition-all">
+                        Ordenar por WhatsApp
+                    </button>
+                </div>
+
+                <!-- 1kg -->
+                <div class="bg-[#141414] border border-stone-800 p-10 text-center hover:border-brand-gold/40 transition-all group">
+                    <div class="mb-10 opacity-60 group-hover:opacity-100 transition-opacity">
+                        <svg class="w-24 h-24 mx-auto text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 10H9L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold mb-2">Reserva</h3>
+                    <p class="text-brand-gold font-semibold tracking-widest text-sm mb-6">1 KILOGRAMO</p>
+                    <p class="text-stone-500 text-sm mb-10 leading-relaxed font-light">Para los paladares más exigentes. Máximo ahorro y frescura.</p>
+                    <div class="text-3xl font-serif mb-10">S/ 85.00</div>
+                    <button onclick="comprar('1kg', 85)" class="w-full border border-stone-700 py-4 text-xs uppercase tracking-widest font-bold hover:bg-brand-gold hover:border-brand-gold transition-all">
+                        Ordenar por WhatsApp
+                    </button>
+                </div>
+            </div>
+            <div class="mt-16 text-center text-stone-500 text-sm tracking-widest">
+                <p>📦 ENVÍO GRATIS A TODO EL PERÚ</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section id="ubicacion" class="py-32 px-6 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+            <div class="w-full md:w-1/2 space-y-8">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold">Nuestro Origen</h2>
+                <p class="text-stone-400 text-lg font-light leading-relaxed">
+                    Ubicados en el majestuoso Valle del Monzón, Huamalíes, Huánuco. Es aquí donde la magia sucede y el café cobra vida.
+                </p>
+                <div class="bg-brand-gold/5 p-8 border-l-2 border-brand-gold">
+                    <p class="text-brand-gold font-bold mb-1">Localización Exacta</p>
+                    <p class="text-stone-300 text-sm">Provincia de Huamalíes, Huánuco - Perú.</p>
+                </div>
+                <a href="https://maps.app.goo.gl/chhm6pik26nWLwed6" target="_blank" class="inline-block text-xs uppercase tracking-widest font-bold border-b border-brand-gold pb-2 hover:text-brand-gold transition-all">
+                    Abrir en Google Maps →
+                </a>
+            </div>
+            <div class="w-full md:w-1/2 h-[400px] bg-stone-900 rounded-sm overflow-hidden flex items-center justify-center relative">
+                <div class="absolute inset-0 bg-brand-gold/5 animate-pulse"></div>
+                <div class="z-10 text-center">
+                    <svg class="w-12 h-12 text-brand-gold mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                    <p class="font-serif italic text-xl">Valle del Monzón</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-stone-900 px-6 text-center">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-2xl font-bold font-serif text-brand-gold mb-12">MONZON VALLEY</div>
+            <div class="text-stone-600 text-[10px] uppercase tracking-[0.3em] space-y-4">
+                <p>© 2025 Monzon Valley Coffee - Todos los derechos reservados</p>
+                <p>Elaborado artesanalmente en Huánuco, Perú</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica de navegación
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-[#0f0f0f]', 'py-4', 'shadow-2xl');
+                navbar.classList.remove('py-8');
+            } else {
+                navbar.classList.remove('bg-[#0f0f0f]', 'py-4', 'shadow-2xl');
+                navbar.classList.add('py-8');
+            }
+        });
+
+        // Lógica de WhatsApp
+        function comprar(presentacion, precio) {
+            const numero = "51999999999"; // CAMBIA ESTE NÚMERO
+            const mensaje = encodeURIComponent(`¡Hola Monzon Valley! Me gustaría pedir la presentación de ${presentacion} (S/ ${precio}.00). Vi la oferta de envío gratis.`);
+            window.open(`https://wa.me/${numero}?text=${mensaje}`, '_blank');
+        }
+    </script>
+</body>
+</html>
